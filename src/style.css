@@ -4,6 +4,7 @@
 
 }
 
+
 #pagina2{
     display: none;
 }
@@ -21,6 +22,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-attachment: fixed;
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -35,6 +37,7 @@
     background-image: url("images/fondo\ estrellas\ full\ hd.jpg");
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
     content: "";
     width: 100vw;
     height: 100vh;
@@ -102,9 +105,22 @@
 
  /*pagina 2 */
 
+
+.imgLogoLetrasHarryp2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-right:auto;
+    position: relative;
+    width: 100%;
+    
+}
+
+
  .pagina2{
     background-image: url("images/fondo\ estrellas\ full\ hd.jpg");
-    color: white;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -116,13 +132,14 @@
     flex-direction: column;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-
+    color: white;
 }
 
 .pagina2:before{
     background-color: black;
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
     content: "";
     height: 120%;
     width: 100vw;
@@ -187,11 +204,10 @@
     box-shadow:-1px 4px 8px gray;
     width: 100vw;
     display: flex;
-    z-index: 3;
     padding: 10px;
 }
 
-.botonRegresar{
+.botonRegresar, .botonRegresarp1{
     background-color: white;
     border: none;
     color:black;
@@ -209,15 +225,22 @@
     margin-top: 19px;
     margin-left: 4px;
     font-family: 'Poppins', sans-serif;
-}
+}   
 
-.botonRegresar{
+.botonRegresar, .botonRegresarp1{
     background-color: #555555;
     color: white;
     
 }
 
 .botonRegresar:hover{
+    background-color: white;
+    color: black;
+    
+}
+
+
+.botonRegresarp1:hover{
     background-color: white;
     color: black;
     
@@ -443,7 +466,39 @@ h1 {
 }
 
 
-@media screen and (min-width: 360px) and (max-width: 480px) {
+/*Media Query's */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .imgsPag1{
+     align-items: center;
+    }
+
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+   
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
+
+/* 
+@media only screen and (max-width: 600px) {
     img {
         max-width:290px;
         }
@@ -475,7 +530,7 @@ h1 {
         width: 60%;
     }
     .nav {
-        width: 60%;
+        width: 100%;
 
     }
 }    
@@ -512,3 +567,4 @@ h1 {
     } 
    }
   
+   /*

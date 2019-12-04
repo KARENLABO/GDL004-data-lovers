@@ -7,14 +7,23 @@
 let bottonconoceMas= document.getElementById ("conocemas");
 let selCasas= document.getElementById ("seleccion-casas");
 let selPersonajes= document.getElementById ("seleccion-personajes");
+let regresarPagina2a1= document.getElementById ("regresarAPag1");
 let regresarPagina4a2= document.getElementById ("regresarAPagina2");
 let regresarPagina3a2= document.getElementById ("regresarAPag2");
+
+
 
 
 bottonconoceMas.addEventListener("click", () => {
   document.getElementById("pagina1").style.display = "none";
   document.getElementById("pagina2").style.display = "block";
 });
+
+regresarPagina2a1.addEventListener("click",() =>{
+  location.reload();
+});
+
+
 
 regresarPagina4a2.addEventListener("click", () => {
   document.getElementById("pagina4").style.display = "none";
@@ -102,10 +111,7 @@ function mostrarPersonajes(personaje){
     p1.classList.add("nombre-actor-personaje");
   // esta linea Crea el personaje y lo muestra en el html
     const crearPersonaje =
-    ` <div class="personajesCards">
-    <strong> 
-         Personaje: 
-      </strong> 
+    ` 
       <h2> ${personaje[i].name} </h2>
       </div> 
      `;
