@@ -1,59 +1,53 @@
-
-*{
+* {
     margin: 0px;
-
-}
-
-
-#pagina2{
+  }
+  
+  #pagina2 {
     display: none;
-}
-
-#pagina3{
+  }
+  
+  #pagina3 {
     display: none;
-}
-
-#pagina4{
+  }
+  
+  #pagina4 {
     display: none;
-}
-/* PAGINA 1 */
-.pagina1{
+  }
+  /* PAGINA 1 */
+  .pagina1 {
     background-image: url("images/hary\ potter\ fondo\ batalla.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-attachment: fixed;
     height: 100vh;
     width: 100vw;
     margin: 0;
-    position: flex;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-}
-
-
-.pagina1:before{
+    align-items: center;
+  }
+  
+  .pagina1:before {
     background-image: url("images/fondo\ estrellas\ full\ hd.jpg");
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
     content: "";
     width: 100vw;
     height: 100vh;
     position: absolute;
-    opacity: .5;
+    opacity: 0.5;
     margin-left: auto;
-    margin-right:auto;
-}
-
-.pagina1 img, p, input{
+    margin-right: auto;
+  }
+  
+  .pagina1 img,
+  p,
+  input {
     position: relative;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-
-.botonConoceMas{
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .botonConoceMas {
     position: absolute;
     bottom: 4%;
     color: white;
@@ -61,31 +55,30 @@
     font-size: 14px;
     padding: 5px;
     background: transparent;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Poppins", sans-serif;
     width: 130px;
     height: 30px;
     border-width: 1px;
-    
-}
-
-.conocemas:hover{
-    border-color:white;
+    cursor: pointer;
+  }
+  
+  .conocemas:hover {
+    border-color: white;
     border-width: 2px;
     font-size: 15px;
-}
-
-.imgsPag1{
+  }
+  
+  .imgsPag1 {
     position: relative;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
     align-items: center;
-}
-
-
-.reseñaPag1{
+  }
+  
+  .resenaPag1 {
     color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    width:600px;
+    font-family: "Poppins", sans-serif;
+    width: 600px;
     height: auto;
     font-size: 14px;
     text-align: center;
@@ -94,123 +87,95 @@
     bottom: 7%;
     margin: 2px;
     padding: 20px;
-}
-
-.reseñaPag1:first-letter{
+  }
+  
+  .resenaPag1:first-letter {
     font-size: 35px;
-    font-family: 'Bitter', serif;
+    font-family: 'Cinzel Decorative', cursive;
     bottom: 6%;
-
-}
-
- /*pagina 2 */
-
-
-.imgLogoLetrasHarryp2{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    margin-right:auto;
-    position: relative;
-    width: 100%;
-    
-}
-
-
- .pagina2{
-    background-image: url("images/fondo\ estrellas\ full\ hd.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  }
+  
+  /*pagina 2 */
+  
+  .gridSelecionOpcion{
     height: 100%;
     width: 100vw;
     margin: 0;
-    position: flex;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-}
-
-.pagina2:before{
-    background-color: black;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    content: "";
-    height: 120%;
-    width: 100vw;
-    position: absolute;
-    opacity: .6;
-    margin-left: auto;
-    margin-right:auto;
-}
-
-
-
-.imgLogoLetrasHarry{
-    text-align: center;   
-    margin-left: 43%;
-    margin-right:auto;
-    position: relative;
-    width: 100px;
-}
-
-.TextoSeleccionaOpcion{
-    text-align: center;   
-    margin-left: auto;
-    margin-right:auto;
-    position: relative;  
-    font-family: 'Vidaloka', serif;
-}
-
-.contenedorImgsYtxtSeleccionP2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
     text-align: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    font-family: vidaLoka
-}
+    align-items: center;
+    justify-items: center;
+    font-family: 'Cinzel Decorative', cursive;
+  }
+  .textoSeleccionaOpcion {
+    margin: 30px;
+    grid-column: span 2;
+    justify-self: center;
+    align-self: center;
+    
+  }
+      
+  .contenedorSelCasas {
+    margin: 20px;
+    grid-row: 2/3;
+    grid-column:1/2 ;
+    justify-items:center;
+    max-width: 350px;
+    max-height: 405px;  ;
+  }
+  
+  .contenedorSelPersonajes {
+    justify-items:center;
+    max-width: 350px;
+    max-height: 405px;  
+  }
 
 
-.imgSeleccionP2{
-    margin: 50px;
-    padding: 20px;
-    
-    
-}
-.imgSeleccionP2:hover{
+  .contenedorSelCasas:hover {
     transform: scale(0.9, 0.9);
-    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
-      -5px -5px 30px 15px rgba(0,0,0,0.22);
-}
 
-/* pagina 3 */
-.pagina3{
+  }
+  .contenedorSelPersonajes:hover {
+    transform: scale(0.9, 0.9);
+
+  }
+  
+  /* pagina 3 */
+  .pagina3 {
+    justify-items: center;
     align-items: center;
     text-align: center;
-
-}
-
-.nav {
+    background: #efefbb;
+    background: -webkit-linear-gradient(to right, #d4d3dd, #efefbb);
+    background: linear-gradient(to right, #d4d3dd, #efefbb);
+  }
+  
+  .nav {
     text-align: center;
-    margin: auto;
     background-color: #333;
-    box-shadow:-1px 4px 8px gray;
+    box-shadow: -1px 4px 8px gray;
     width: 100vw;
-    display: flex;
-    padding: 10px;
-}
+    height: 30%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    }
+  
+    .nav .imgLogoLetrasHarry{
+    grid-column: 2/3;
+    }
+    .nav .botonRegresar{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    }
 
-.botonRegresar, .botonRegresarp1{
+  
+  .botonRegresar {
     background-color: white;
     border: none;
-    color:black;
+    color: black;
     padding: 10px;
     width: 80px;
     height: 40px;
@@ -224,86 +189,65 @@
     border-radius: 6px;
     margin-top: 19px;
     margin-left: 4px;
-    font-family: 'Poppins', sans-serif;
-}   
-
-.botonRegresar, .botonRegresarp1{
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .botonRegresar {
     background-color: #555555;
     color: white;
-    
-}
-
-.botonRegresar:hover{
+  }
+  
+  .botonRegresar:hover {
     background-color: white;
     color: black;
-    
-}
-
-
-.botonRegresarp1:hover{
-    background-color: white;
-    color: black;
-    
-}
-
-
-
-.imgCasas{
+  }
+  
+  .imgCasas {
     margin: 30px;
     width: 230px;
     height: 480px;
     border-radius: 40px;
     padding: 20px;
-    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-    cursor: pointer;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+      -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+    /* cursor: pointer; */
     transition: 0.4s;
-}
-
-.descripcionCasas{
+  }
+  
+  .descripcionCasas {
     color: black;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     height: auto;
     font-size: 16px;
     text-align: center;
     margin: auto;
     margin: 2px;
     padding: 20px;
-
-}
-
-.mayusCasas{
-    font-family: 'Vidaloka', serif;
+  }
+  
+  .mayusCasas {
+    font-family: "Vidaloka", serif;
     font-size: 20px;
-}
-.imgCasas:hover{
-    transform: scale(0.9, 0.9);
-    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
-}
-
-.describeCasas {
+  }
+  .describeCasas {
     text-align: center;
-}
-
-/* pagina 4 */
-.nav {
-    text-align: center;
-    margin: auto;
-    background-color: #333;
-    box-shadow:-1px 4px 8px gray;
-    z-index: 999;
-    width: 100vw;
-}
-
-
-.filtrosPersonajes{
+  }
+  
+  /* pagina 4 */
+  .pagina4{
+    background: #efefbb;
+    background: -webkit-linear-gradient(to right, #d4d3dd, #efefbb);
+    background: linear-gradient(to right, #d4d3dd, #efefbb);
+  }
+  
+  
+  .filtrosPersonajes {
     text-align: center;
     padding: 10px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.botonFiltros{
-    
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .botonFiltros {
     border: none;
     color: white;
     padding: 10px 15px;
@@ -316,255 +260,198 @@
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 6px;
-    font-family: 'Poppins', sans-serif;
-    
-}
-
-
-.botonFiltros{
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .botonFiltros {
     background-color: white;
     color: black;
     border: 2px solid #555555;
-}
-
-.botonFiltros:hover{
+  }
+  
+  .botonFiltros:hover {
     background-color: #555555;
     color: white;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-body {
-	background: #EFEFBB;
-	background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
-	background: linear-gradient(to right, #D4D3DD, #EFEFBB);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin: 0;
-}
-
-h1 {
-	letter-spacing: 3px;
-}
-
-.personajes {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: space-between;
-	justify-content: center;
-	margin: 0 auto;
-	max-width: 1200px;
-}
-
-.mostrarPersonajes{
-	background-color: rgb(49, 43, 43);
-	border-radius: 20px;
-	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-	margin: 10px;
-	padding: 20px;
-	text-align: center;
-}
-
-.centro{
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  h1 {
+    letter-spacing: 3px;
+  }
+  
+  .personajes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .mostrarPersonajes {
+    background-color: rgb(49, 43, 43);
+    border-radius: 20px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    margin: 10px;
+    padding: 20px;
     text-align: center;
-}
-
-.mostrarPersonajes .img-container {
-	background-color: rgba(255, 255, 255, 0.6);
-	border-radius: 50%;
-	width: 120px;
-	height: 120px;
-	text-align: center;
-}
-
-.mostrarPersonajes .img-container img {
-	margin-top: 20px;
-	max-width: 90%;
-}
-
-.mostrarPersonajes .info {
-	margin-top: 20px;
-	font-size: 0.8em;
-}
-
-.strong{
-    font-family: 'Vidaloka', serif;
-}
-
-.personajesCards{
-    font-family: 'Poppins', sans-serif;
+  }
+  
+  .centro {
+    text-align: center;
+  }
+  
+  .mostrarPersonajes .img-container {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+  }
+  
+  .mostrarPersonajes .img-container img {
+    margin-top: 20px;
+    max-width: 90%;
+  }
+  
+  .mostrarPersonajes .info {
+    margin-top: 20px;
+    font-size: 0.8em;
+  }
+  
+  .strong {
+    font-family: "Vidaloka", serif;
+  }
+  
+  .personajesCards {
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
-}
-
-.actores{
-    font-family: 'Poppins', sans-serif;
+  }
+  
+  .actores {
+    font-family: "Poppins", sans-serif;
     font-size: 15px;
-}
-
-.mostrarPersonajes .number {
-	background-color: rgba(0, 0, 0, 0.1);
-	border-radius: 10px;
-	font-size: 10px;
-	padding: 5px 10px;
-}
-
-.mostrarPersonajes .name {
-	margin: 13px 0 7px;
-	letter-spacing: 1px;
-}
-
-.mostrarPersonajes {
-  z-index: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap
-}
-
-.card {
+  }
+  
+  .mostrarPersonajes .number {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+  
+  .mostrarPersonajes .name {
+    margin: 13px 0 7px;
+    letter-spacing: 1px;
+  }
+  
+  .mostrarPersonajes {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card {
     margin: 30px auto;
     width: 250px;
     height: 380px;
     border-radius: 40px;
     padding: 20px;
-    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-    cursor: pointer;
+    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+      -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
     justify-content: space-around;
     transition: 0.4s;
-    font-family: 'Vidaloka', serif;
+    font-family: "Vidaloka", serif;
     border-color: #333;
-    
-}
-
-
-.card:hover {
-    transform: scale(0.9, 0.9);
-    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
-    -5px -5px 30px 15px rgba(0,0,0,0.22);
-}
-
-.img-personajes {
+  }
+  
+  .img-personajes {
     border-radius: 30px;
     position: flex;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.imagenesP{
-    border-radius: 100px; 
-    width: 170px;
-    height:210px;
-}
-
-.nombre-actor-personaje {
-    text-align: center;
-}
-
-
-/*Media Query's */
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .imgsPag1{
-     align-items: center;
-    }
-
-    
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-   
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    
-}
-
-/* 
-@media only screen and (max-width: 600px) {
-    img {
-        max-width:290px;
-        }
-     #container{
-        width:auto;
-        }
-     header h1 a{
-        width:auto;
-        }
-    .imgsPag1{
-            width:100%;
-        }
-   .reseñaPag1{
-            width:80%;  
-        }
-    .pagina1{
-            width: 70%;
-        }
-    .contenedorImgsYtxtSeleccionP2{
-        width: 70%;
-        text-align: center;
-        }
-    .imgSeleccionP2{
-        width: 60%;
-        height: 10%;
-        text-align: center;
-        }   
-    .pagina2:before{
-        width: 60%;
-    }
-    .nav {
-        width: 100%;
-
-    }
-}    
-
-
-
-@media screen and (max-width:600px){
-    img {
-    max-width:290px;
-    }
-    #container{
-    width:auto;
-    }
-    header h1 a{
-    width:auto;
-    }
-    .imgsPag1{
-        width:10%;
-    }
-    .reseñaPag1{
-        width:80%;
-    }
-    .conocemas{
-        width: 30%;
-    }
-    .contenedorImgsYtxtSeleccionP2{
-        width: 40%;
-    }
-    .imgSeleccionP2{
-        width: 70%;
-    }  
-    .nav {
-        width: 70%;
-    } 
-   }
+  }
   
-   /*
+  .imagenesP {
+    border-radius: 100px;
+    width: 170px;
+    height: 210px;
+  }
+  
+  .nombre-actor-personaje {
+    text-align: center;
+  }
+  
+  @media screen and (min-width: 360px) and (max-width: 480px) {
+    img {
+      max-width: 290px;
+    }
+    #container {
+      width: auto;
+    }
+    header h1 a {
+      width: auto;
+    }
+    .imgsPag1 {
+      width: 70%;
+    }
+    .resenaPag1 {
+      width: 80%;
+    }
+    .pagina1 {
+      width: 95%;
+    }
+    .contenedorImgsYtxtSeleccionP2 {
+      width: 70%;
+      text-align: center;
+    }
+
+
+    
+  }
+  
+  @media screen and (max-width: 600px) {
+    img {
+      max-width: 290px;
+    }
+  
+    #container {
+      width: auto;
+    }
+  
+    header h1 a {
+      width: auto;
+    }
+    .imgsPag1 {
+      width: 84%;
+    }
+    .resenaPag1 {
+      width: 80%;
+    }
+    .conocemas {
+      width: 30%;
+    }
+    .contenedorImgsYtxtSeleccionP2 {
+      width: 40%;
+    }
+
+      
+  }
+  
