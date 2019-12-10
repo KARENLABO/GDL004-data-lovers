@@ -9,12 +9,18 @@ import {
 } from './data.js';
 
 
+
 // array's
 const infoGeneral = todosLosPersonajes(POTTER);
 const filHombres = hombres(POTTER);
 const filMujeres = mujeres(POTTER);
 const ordenar = ordenarPorNombre(POTTER);
 
+// obtiene el objeto del HTML
+const botonHombres = document.getElementById('hombres');
+const botonMujeres = document.getElementById('mujeres');
+const botonOrdenar = document.getElementById('OrdenarA-Z');
+const mostrar = document.getElementById('mostrarPersonajes');
 
 // crea el div general de los personajes principales
 const lista = document.createElement('div');
@@ -70,20 +76,26 @@ function mostrarPersonajes(personaje) {
   mostrar.appendChild(lista);
 }
 
-// obtiene el objeto del HTML
-const botonHombres = document.getElementById('hombres');
-const botonMujeres = document.getElementById('mujeres');
-const botonOrdenar = document.getElementById('OrdenarA-Z');
-const mostrar = document.getElementById('mostrarPersonajes');
 const bottonconoceMas = document.getElementById('conocemas');
 const selCasas = document.getElementById('seleccion-casas');
 const regresarPagina2a1 = document.getElementById('regresarAPag1');
 const selPersonajes = document.getElementById('seleccion-personajes');
 const regresarPagina4a2 = document.getElementById('regresarAPagina2');
 const regresarPagina3a2 = document.getElementById('regresarAPag2');
-const modalGryffindor = document.getElementById('gryffindor');
-const cerrarPantallaModal = document.getElementById('regresarAPag2');
+const grifindorCasa = document.getElementById('gryffindor');
+const cerrarModal=  document.getElementById('cerraModal');
 
+
+
+regresarPagina4a2.addEventListener('click', () => {
+  document.getElementById('pagina4').style.display = 'none';
+  document.getElementById('pagina2').style.display = 'block';
+});
+
+regresarPagina3a2.addEventListener('click', () => {
+  document.getElementById('pagina3').style.display = 'none';
+  document.getElementById('pagina2').style.display = 'block';
+});
 
 bottonconoceMas.addEventListener('click', () => {
   document.getElementById('pagina1').style.display = 'none';
@@ -116,9 +128,14 @@ selPersonajes.addEventListener('click', () => {
   mostrarPersonajes(infoGeneral);
 });
 
-modalGryffindor.addEventListener('click', () =>{
-  document.getElementById('modalGryffindor').style.display = 'block';
+grifindorCasa.addEventListener('click', () => {
+    document.getElementById('modalCasas').style.display = 'block';
 });
+
+cerrarModal.addEventListener('click', () => {
+  document.getElementById('modalCasas').style.display = 'none';
+});
+
 
 // se agregan los eventos y las funcciones a los botones
 botonHombres.addEventListener('click', () => mostrarPersonajes(filHombres));
