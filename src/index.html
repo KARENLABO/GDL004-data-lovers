@@ -1,35 +1,215 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Data Lovers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Metamorphous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Metamorphous&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bitter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Patua+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Calistoga&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link 
+    href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" 
+    rel="stylesheet"
+    />
+
+    <link 
+    href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700&display=swap" 
+    rel="stylesheet"
+    />
     
 
   </head>
-  <body class="blackBackground">
-    <div class="transparencia"></div>
-    <div class="textoBienvenida">
-      <h1>Bienvenidos al magico mundo de </h1>
-      
+  <body>
+    <div id="pagina1" class="pagina1">
 
-
-      <div class="logo-harry">
-          <img src="http://www.pngmart.com/files/3/Harry-Potter-Transparent-PNG.png" alt="logoHarry" width="400" />
-          <div>
-
-              <p class="footer">Harry Potter  es una serie de novelas fantásticas  en la que se describen las aventuras del joven aprendiz de magia y
-                  hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se centra en la lucha
-                  entre Harry Potter y el malvado mago Lord Voldemort, quien asesinó a los padres de Harry en su afán de conquistar el mundo mágico.</p>
-        
+      <div class="logoHarryPotter">
+          <img src="images/logo harry poter.png" width="400" />
         </div>
+
+      <div class="resenaPag1">
+        <p>
+          Harry Potter es una serie de novelas fantásticas en la que se
+          describen las aventuras del joven aprendiz de magia y hechicería y sus
+          amigos.<br /><br />
+          El argumento se centra en la lucha entre Harry Potter y el malvado
+          mago Lord Voldemort, quien asesinó a los padres de Harry en su afán de
+          conquistar el mundo mágico.
+        </p>
+      </div>
+
+      
+      <button class="botonConoceMas" id="conocemas">Conoce más</button>
+    </div>
+
+    <div class="pagina2"id="pagina2">
+      <nav class="nav">
+        
+        <div class="imgLogoLetrasHarry">
+          <img src="images/logo harry poter.png" width="200" />
+        </div>
+        <button class="botonRegresar" id="regresarAPag1">Atras</button>
+      </nav>
+
+      <div class="gridSelecionOpcion">
+
+          <div class="textoSeleccionaOpcion">
+            <h1>Selecciona una Opcion</h1>
+          </div>
+        
+
+        <div class="contenedorSelCasas">
+          <h2>CASAS</h2>
+          <br />
+          <img
+            src="images/casas Harry potter.jpg"
+            id="seleccion-casas"
+            width="330"
+            height="328"
+          />
+        </div>
+          
+
+        <div class="contenedorSelPersonajes">
+          <h2>TODOS LOS PERSONAJES</h2>
+          <br />
+          <img
+            src="images/PERSONAJES DE HARRY POTER2.png"
+            width="330"
+            height="330"
+            id="seleccion-personajes"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="pagina3">
+      <div class="navPag3">
+        <nav class="nav">
+          <button class="botonRegresar" id="regresarAPag2">Atras</button>
+          <div class="imgLogoLetrasHarry">
+            <img src="images/logo harry poter.png" width="150" height="70" />
+          </div>
+        </nav>
+      </div>
+
+      <div  id="modalCasas"class="modalCasas">
+                
+        <div id="cerraModal" class="cerrarModal">
+          <img  src="images/imgCerrar.png" width="30" height="30" />
+        </div>
+
+        <div id="textoModal" class="textoModal">
+            <h2>Estudiantes de:</h2>
+          </div>
+      </div>
+
+      <div class="cardsCasas">
+        
+          <div id ="gryffindor" class="gryffindor">
+            <img src="images/grifindor.png" width="120" height="207" />
+              
+            <p class="descripcionCasas">
+                <strong class="txtNombreCasa"> Gryffindor: </strong> <br />
+                <br />
+                Acepta en su casa a aquellos magos y brujas que tenían valentía,
+                disposición y coraje.
+              </p>
+          </div>    
+       
+
+          
+            <div id="hufflepuff"class="hufflepuff">
+              <img src="images/hufflepuff.png" width="120" height="207" />
+              <p class="descripcionCasas">
+                <strong class="txtNombreCasa">Hufflepuff: </strong> <br />
+                <br />
+                Busca alumnos leales, honestos, que no temen al trabajo pesado.
+              </p>
+            </div>
+         
+
+         
+            <div class="ravenclaw" id="ravenclaw:">
+              <img src="images/revenclaw.png" width="120" height="207" />
+              <p class="descripcionCasas">
+                <strong class="txtNombreCasa"> Ravenclaw: </strong> <br />
+                <br />
+                Busca alumnos académicos, estudiosos y que siempre sepan lo que
+                hay que hacer.
+              </p>
+            </div>
+         
+
+         
+            <div class="slytherin" id="slytherin">
+              <img src="images/sytherin.png" width="120" height="207" />
+              <p class="descripcionCasas">
+                <strong class="txtNombreCasa"> Slytherin: </strong> <br />
+                <br />
+                Caracterizada principalmente por la ambición y la astucia.
+              </p>
+            </div>
+         
+      </div>
+    </div>  
+  </div>
+
+
+    <div id="pagina4">
+      <div class="navPag4">
+        <nav class="nav">
+          <button class="botonRegresar" id="regresarAPagina2">Atras</button>
+          <div class="imgLogoLetrasHarry">
+            <img src="images/logo harry poter.png" width="150" height="70" />
+          </div>
+        </nav>
+      </div>
+
+      <div class="filtrosPersonajes">
+        <button id="hombres" class="botonFiltros" value="male">Hombres</button>
+        <button id="mujeres" class="botonFiltros" value="female">
+          Mujeres
+        </button>
+        <button id="OrdenarA-Z" class="botonFiltros">Ordenar A-Z</button>
+      </div>
+
+      <div class="personajes" id="mostrarPersonajes"></div>
+    </div>
     <div id="root"></div>
+
     <script type="module" src="main.js"></script>
+    
+    
   </body>
 </html>
