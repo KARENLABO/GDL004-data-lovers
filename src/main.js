@@ -1,12 +1,17 @@
 import POTTER from './data/potter/potter.js';
 
-// trae las funciones del otro js
+// importa las funciones del otro JS
 import {
   todosLosPersonajes,
   hombres,
   mujeres,
   ordenarPorNombre,
+  filtroAlumnosSly,
+  filtroAlumnosGry,
+  filtroAlumnosHuf,
+  filtroAlumnosRav,
 } from './data.js';
+
 
 
 
@@ -15,12 +20,85 @@ const infoGeneral = todosLosPersonajes(POTTER);
 const filHombres = hombres(POTTER);
 const filMujeres = mujeres(POTTER);
 const ordenar = ordenarPorNombre(POTTER);
+const filAlumnSly= filtroAlumnosSly(POTTER);
+const filAlumnGry= filtroAlumnosGry(POTTER);
+const filAlumnHuf= filtroAlumnosHuf(POTTER);
+const filAlumnRav= filtroAlumnosRav(POTTER);
+
+
+
 
 // obtiene el objeto del HTML
 const botonHombres = document.getElementById('hombres');
 const botonMujeres = document.getElementById('mujeres');
 const botonOrdenar = document.getElementById('OrdenarA-Z');
 const mostrar = document.getElementById('mostrarPersonajes');
+const mostrarModalHouses = document.getElementById('modalPadreCasas');
+
+//--MODALES PARA CASAS--
+
+//crea el div que va guardar el modal de casas 
+const modalCasa = document.createElement('div');
+modalCasa.classList.add('modalCasas');
+
+function mostrarModalesCasas(filtroArrayCasa){
+
+  lista.innerHTML = '';
+  
+  for (let i=0 ; i < filtroArrayCasa.length; i++){
+   
+    //--ESTAS LINEAS CREAN LOS ELEMENTOS DEL HTML--
+      const card = document.createElement('div');
+      const img = document.createElement('img');
+      const divImg = document.createElement('div');
+      const p1 = document.createElement('p');
+     
+    //--ESTAS LINEAS CREAN LAS CLASES DE LOS DIV'S--
+      // Clase Card Modal
+        card.classList.add('cardModal');
+      // Clase div imagenes
+      divImg.classList.add('imgpersonajesModal');
+      // Clase a las fotos de los personajes
+      img.classList.add('imagenesPModal');
+      // Clase al P1 del nombre de personaje
+      p1.classList.add('personajeModal');
+
+    //-- ESTAS LINEAS AGREGAN LOS ELEMENTOS A LAS CARD'S
+      // Se agrega la imagen al div de las imagenes
+      divImg.appendChild(img);
+      // Se agrega el div de las imagenes a Card
+      card.appendChild(divImg);
+    
+    //-- ESTAS LINEAS AGREGAN LOS ATRIBUTOS A LOS ELEMENTOS
+      // Atributo del src a la imagen
+      img.setAttribute('src', filtroArrayCasa[i].image);
+    
+    
+    // Crea el estilo del personaje 
+        const crearPersonaje = ` <div class="personajesModal">
+        <strong> 
+            Personaje: 
+          </strong> 
+          <h2> ${filtroArrayCasa[i].name} </h2>
+          </div> 
+        `;
+    // Toma el estilo del personaje y lo muestra en el HTML
+    p1.innerHTML = crearPersonaje;
+
+    // Se agrega a Card el nombre del Personaje
+    card.appendChild(p1);
+
+    // Se agregan todas las cards al div principal
+    modalCasa.appendChild(card);
+    
+  }
+  
+  // Se agregan todos los personajes al div que se encuentra en HTML "PADRE"
+  mostrarModalHouses.appendChild(modalCasa);
+  
+};
+
+//-- MUESTRA TODOS LOS PERSONAJES EN PANTALLA--
 
 // crea el div general de los personajes principales
 const lista = document.createElement('div');
@@ -82,8 +160,9 @@ const regresarPagina2a1 = document.getElementById('regresarAPag1');
 const selPersonajes = document.getElementById('seleccion-personajes');
 const regresarPagina4a2 = document.getElementById('regresarAPagina2');
 const regresarPagina3a2 = document.getElementById('regresarAPag2');
-const grifindorCasa = document.getElementById('gryffindor');
-const cerrarModal=  document.getElementById('cerraModal');
+const gryffindorHouseModal=  document.getElementById('gryffindor');
+
+
 
 
 
@@ -128,12 +207,9 @@ selPersonajes.addEventListener('click', () => {
   mostrarPersonajes(infoGeneral);
 });
 
-grifindorCasa.addEventListener('click', () => {
-    document.getElementById('modalCasas').style.display = 'block';
-});
-
-cerrarModal.addEventListener('click', () => {
-  document.getElementById('modalCasas').style.display = 'none';
+gryffindorHouseModal.addEventListener('click', () => {
+  document.getElementById('modalPadreCasas').style.display='block';
+  mostrarModalesCasas(filAlumnGry);
 });
 
 

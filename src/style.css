@@ -13,6 +13,12 @@
 #pagina4 {
   display: none;
 }
+
+.modalPadreCasas{
+  display: none;
+}
+
+
 /* PAGINA 1 */
 .pagina1 {
   background-image: url("images/hary\ potter\ fondo\ batalla.jpg");
@@ -217,32 +223,6 @@ input {
   color: black;
 }
 
-.modalCasas{
-  background: black;
-  height: 90vh;
-  width: 80vw;
-  justify-self: center;
-  align-self: center;
-  text-align: center;
-  padding: 20px;
-  border-radius:  20px;
-  position: absolute;
-  top: 18%;
-  left:10%;
-  color: cornsilk;
-  display: none;
-}
-
-.modalCasas .cerrarModal{
-position: absolute;
-right: 2%;
-top:2%
-}
-
-.modalCasas .textoModal{
-font-family: "Poppins", sans-serif;
-}
-
 .gryffindor, .hufflepuff , .ravenclaw , .slytherin{
   margin: 30px auto;
   width: 250px;
@@ -262,6 +242,7 @@ font-family: "Poppins", sans-serif;
 
 .gryffindor:hover, .hufflepuff:hover , .ravenclaw:hover , .slytherin:hover{
 transform: scale(0.9, 0.9);
+position: relative;
 }
 
 .cardsCasas{
@@ -271,6 +252,7 @@ align-items: space-between;
 justify-content: center;
 margin: 0 auto;
 max-width: 1200px;
+position: relative;
 }
 
 .txtNombreCasa{
@@ -278,8 +260,31 @@ font-family: 'Cinzel Decorative', cursive;
 font-size: 20px;
 }
 
+.modalPadreCasas{
+  background-color: tomato;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
 
 
+/*  PARA MOVER EL TAMAÑO DE LAS IMAGENES */
+.imagenesPModal{
+  width: 50px;
+  height: auto;
+}
+/*  PARA MOVER EL DIV Y LA POSICION DE LAS IMAGENES */
+.imgpersonajesModal{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modalCasas{
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
 
 
 /* pagina 4 */
@@ -462,7 +467,9 @@ h1 {
 
   img {
     max-width: 290px;
+    position: relative;
   }
+
   .resenaPag1{
     font-size: 12px;
     text-align: center;
